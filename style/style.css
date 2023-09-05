@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none ;
+}
+body{
+    height: 300vh;
+    background-color: blueviolet;
+}
+#navBar{
+    position: fixed;
+    width: 100%;
+    transition: all ease-in-out 0.3s;
+}
+nav{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    align-items: center;
+    min-height: 60px;
+    background-color: white;
+}
+nav ul li{
+    position: relative;
+}
+#logo{
+    display: flex;
+    justify-content: center;
+}
+#navmenu{
+    display: flex;
+    justify-content: space-evenly;
+}
+#navmenu a{
+    padding: 10px;
+}
+.navMenuDropdown{
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    background-color: rgba(245, 245, 245, 0.541);
+    width: 200px;
+    top: 100%;
+    transform: translateY(60px);
+    transition: all ease-in-out 0.3s;
+    opacity: 0;
+}
+.navMenuDropdownShow{
+    visibility: visible;
+    position: absolute;
+    background-color: rgba(245, 245, 245, 0.747);
+    width: 200px;
+    top: 48%;
+    transform: translateY(30.5px);
+   transition: all ease-in-out 0.5s;
+   opacity: 1;
+}
+.navMenuDropdown li{
+    padding: 10%;
+}
+.drpIcon{
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+    margin-left: 5px;
+}
+.drpIconShow{
+    color: chartreuse;
+    transform: rotate(180deg);
+   transition: all 0.5s;
+   margin-left: 5px;
+}
+.onBarAccueil,.onBarServices,.onBarContact{
+    transition: all linear 0.3s;
+    opacity: 0;
+    display: block;
+    position: absolute;
+    top: 30px;
+    background: linear-gradient(to right, blueviolet,rgb(235, 12, 186));
+    height: 4px;
+    width: 10%;
+    border-radius: 15px;
+}
+.onBarAll{
+    transition: all linear 0.3s;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 30px;
+    background: linear-gradient(to right, blueviolet,rgb(235, 12, 186));
+    height: 4px;
+    width: 100%;
+    border-radius: 15px;
+}
+#ulHamBtn{
+    display: none;
+}
+.hambBtn{
+    width: 35px;
+    padding: 10px;
+}
+.hambBtn:hover{
+    cursor: pointer;
+}
+.hambSpan{
+    display: block;
+    background: linear-gradient(to right, blueviolet,rgb(235, 12, 186));
+    height: 4px;
+    width: 100%;
+    border-radius: 20px;
+    margin: 5px 0;
+}
+.hambMenu{
+    display: block;
+}
+.collapseMenuDrpdown{
+    display: none;
+}
+.collapseMenuDrpdownShow{
+    display: block;
+}
+.collapseMenu{
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+    top: 60px;
+    right: -850px;
+    transition: 0.5s ease-in-out;
+
+}
+.collapseMenuOn{
+    position: absolute;
+    display: none;
+    top: 60px;
+    right: 0px;
+    transition: 0.5s ease-in-out;
+}
+
+.collapseMenu li{
+    padding: 20px;
+    margin-left: 20px;
+
+}
+.hambMenu hr{
+    background: linear-gradient(to right, blueviolet,rgb(235, 12, 186));
+    min-height: 4px;
+    border: none;
+    width: 90%;
+    border-radius: 20px;
+    margin: 0 auto;
+
+    
+}
