@@ -1,24 +1,41 @@
+/* ***************GENERAL**************** */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif; */
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style-type: none ;
 }
+
 body{
-    height: 300vh;
     background-color: blueviolet;
 }
-#navBar{
+main{
+    height: 300vh;
+}
+img{
+    max-width: 100%;
+}
+/* ***************NAVBAR**************** */
+.navBar{
+    left: 1700px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.0rem;
+    font-weight: 500;
     position: fixed;
     width: 100%;
-    transition: all ease-in-out 0.3s;
-}
-nav{
+    transition: all ease-in-out 2s;
     display: grid;
     grid-template-columns: 25% 75%;
     align-items: center;
-    min-height: 60px;
+    min-height: 70px;
     background-color: white;
+}
+.navBar a{
+    color: black;
 }
 nav ul li{
     position: relative;
@@ -58,7 +75,7 @@ nav ul li{
 .navMenuDropdown li{
     padding: 10%;
 }
-.drpIcon{
+.drpIcon, .drpIcon2{
     display: inline-block;
     transition: all 0.5s ease-in-out;
     margin-left: 5px;
@@ -101,17 +118,36 @@ nav ul li{
 .hambBtn:hover{
     cursor: pointer;
 }
-.hambSpan{
+.hambSpan1,.hambSpan2,.hambSpan3{
     display: block;
     background: linear-gradient(to right, blueviolet,rgb(235, 12, 186));
     height: 4px;
     width: 100%;
     border-radius: 20px;
     margin: 5px 0;
+    transition: all 0.5s ease-in-out;
+
 }
-.hambMenu{
-    display: block;
-}
+ .hambSpan3On{
+    transform: rotate(140deg);
+    position: absolute;
+    top: 5px;
+    width: 70%;
+    transition: all 0.5s ease-in-out;
+
+ }
+ .hambSpan1On{
+    transform: rotate(-140deg);
+    position: absolute;
+    top: 5px;
+    width: 70%;
+    transition: all 0.5s ease-in-out;
+ }
+ .hambSpan2On{
+    display: none;
+    transition: all 0.5s ease-in-out;
+ }
+
 .collapseMenuDrpdown{
     display: none;
 }
@@ -126,7 +162,6 @@ nav ul li{
     top: 60px;
     right: -850px;
     transition: 0.5s ease-in-out;
-
 }
 .collapseMenuOn{
     position: absolute;
@@ -148,6 +183,45 @@ nav ul li{
     width: 90%;
     border-radius: 20px;
     margin: 0 auto;
-
+}
+.descriText{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 0.5rem;
+}
+.descriTextH1{
+   transform: translateX(-600px);
+    font-weight: 800;
+    margin-bottom: 20px;
+    transition: all 1s ease-in-out;
+}
+.descriTextH2{
+    font-weight: 600;
+    margin-bottom: 30px;
+    transform: translateX(-800px);
+    transition: all 2s ease-in-out;
+}
+.descriTextP{
+    opacity:0;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    transform: translateY(200px);
+    transition: all 2s ease-in-out;
+}
+.descriTextPShow{
+    opacity:1;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    transform: none;
+    transition: all 3s ease-in-out;
+}
+#descri{
+    display: flex;
+    padding-top: 150px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    margin: 0 50px;
     
 }

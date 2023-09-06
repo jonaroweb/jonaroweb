@@ -2,12 +2,18 @@ const navBarEffect = () => {
     let lastScroll;
     const navMenuDropdown = document.querySelector(".navMenuDropdown");
     const drpIcon = document.querySelector(".drpIcon");
+    const drpIcon2 = document.querySelector(".drpIcon2");
     const onBarAccueil = document.querySelector(".onBarAccueil");
     const onBarServices = document.querySelector(".onBarServices");
     const onBarContact = document.querySelector(".onBarContact");
     const collapseMenuDrpdown = document.querySelector(".collapseMenuDrpdown");
     const collapseMenu = document.querySelector(".collapseMenu");
     const hambBtn = document.querySelector(".hambBtn");
+    const main = document.querySelector("main");
+    const hambSpan1 = document.querySelector(".hambSpan1");
+    const hambSpan2 = document.querySelector(".hambSpan2");
+    const hambSpan3 = document.querySelector(".hambSpan3");
+    const navBar = document.querySelector(".navBar");
 
     services.addEventListener("click", () => {
         navMenuDropdown.classList.toggle("navMenuDropdownShow");
@@ -48,16 +54,39 @@ const navBarEffect = () => {
     window.addEventListener("scroll", () => {
         if (lastScroll < window.scrollY) {
             navBar.style.top = "-90px";
+            navBar.style.transition = "0.4s";
         } else {
             navBar.style.top = 0;
+            navBar.style.transition = "0.4s";
         }
         lastScroll = window.scrollY;
     });
     collapseMenuServices.addEventListener("click", () => {
         collapseMenuDrpdown.classList.toggle("collapseMenuDrpdownShow");
+        drpIcon2.classList.toggle("drpIconShow");
     });
     hambBtn.addEventListener("click", () => {
         collapseMenu.classList.toggle("collapseMenuOn");
+        hambSpan1.classList.toggle("hambSpan1On");
+        hambSpan2.classList.toggle("hambSpan2On");
+        hambSpan3.classList.toggle("hambSpan3On");
+    });
+    main.addEventListener("click", () => {
+        collapseMenu.classList.remove("collapseMenuOn");
+        hambSpan2.classList.remove("hambSpan2On");
+        hambSpan3.classList.remove("hambSpan3On");
+        hambSpan1.classList.remove("hambSpan1On");
+    });
+    window.addEventListener("load", () => {
+        navBar.style.left = 0;
     });
 };
 navBarEffect();
+const descriTextH1 = document.querySelector(".descriTextH1");
+const descriTextH2 = document.querySelector(".descriTextH2");
+const descriTextP = document.querySelector(".descriTextP");
+window.addEventListener("load", () => {
+    descriTextH1.style.transform = "none";
+    descriTextH2.style.transform = "none";
+    descriTextP.classList.add("descriTextPShow");
+});
