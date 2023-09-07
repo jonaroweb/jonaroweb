@@ -78,15 +78,18 @@ const navBarEffect = () => {
         hambSpan1.classList.remove("hambSpan1On");
     });
     window.addEventListener("load", () => {
-        navBar.style.left = 0;
+        navBar.style.top = 0;
+        navBar.style.opacity = "1";
     });
 };
 navBarEffect();
 const descriTextH1 = document.querySelector(".descriTextH1");
 const descriTextH2 = document.querySelector(".descriTextH2");
 const descriTextP = document.querySelector(".descriTextP");
+const descriImg = document.querySelector(".descriImg");
 window.addEventListener("load", () => {
     descriTextH1.style.transform = "none";
     descriTextH2.style.transform = "none";
     descriTextP.classList.add("descriTextPShow");
+    descriImg.classList.add("descriImgShow");
 });

@@ -8,19 +8,17 @@ font-family: 'Roboto', sans-serif; */
     text-decoration: none;
     list-style-type: none ;
 }
-
 body{
     background-color: blueviolet;
 }
 main{
     height: 300vh;
 }
-img{
-    max-width: 100%;
-}
+
 /* ***************NAVBAR**************** */
 .navBar{
-    left: 1700px;
+    opacity: 0;
+    top: -90px;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.0rem;
@@ -187,23 +185,27 @@ nav ul li{
 .descriText{
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    font-size: 1.8rem;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.7rem;
 }
 .descriTextH1{
-   transform: translateX(-600px);
+    text-transform: uppercase;
+    text-shadow:#00000075 4px 5px 8px;
+   transform: translateX(-1000px);
     font-weight: 800;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin-bottom: 30px;
     transition: all 1s ease-in-out;
 }
 .descriTextH2{
     font-weight: 600;
-    margin-bottom: 30px;
-    transform: translateX(-800px);
+    font-size: 2rem;
+    margin-bottom: 50px;
+    transform: translateX(-1000px);
     transition: all 2s ease-in-out;
 }
 .descriTextP{
     opacity:0;
+    font-size: 1.2rem;
     font-weight: 300;
     letter-spacing: 0.2rem;
     transform: translateY(200px);
@@ -217,11 +219,76 @@ nav ul li{
     transition: all 3s ease-in-out;
 }
 #descri{
-    display: flex;
-    padding-top: 150px;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    padding-top: 200px;
     align-items: center;
     justify-items: center;
-    justify-content: center;
-    margin: 0 50px;
+    justify-content: space-around;
+    gap: 50px;
+
     
 }
+.descriImg{
+    opacity: 0;
+    transform: translateX(1000px);
+    transition: all 1s ease-in-out;
+}
+.descriImg img{
+    border-radius: 5px;
+    box-shadow: #0000009e 7px 3px 13px 0px;
+    width: 100%;
+}
+.descriImgShow{
+    opacity: 1;
+    transform: none;
+    transition: all 1s ease-in-out;
+}
+
+/* ****************MEDIA QUERIES****************** */
+
+@media screen and (max-width:1250px) {
+    .descriText{
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        letter-spacing: 0.4rem;
+    }
+    .descriTextH1,.descriTextH2{
+         margin-bottom: 20px; 
+    }
+}
+
+
+@media screen and (max-width:1160px) {
+    #descri{
+    grid-template-columns: 100%;
+    margin: 0 10px;
+ }
+ .descriText{
+    letter-spacing: 0.5rem;
+}
+}
+@media screen and (max-width:800px) {
+    .descriText{
+        letter-spacing: 0;
+    }
+    .descriTextH1,.descriTextH2{
+        margin-bottom: 10px;
+    }
+    #navmenu{
+        display: none;
+    }
+    #ulHamBtn{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .collapseMenuOn{
+        display: block;
+        transition: 0.5s ease-in-out;
+    }
+    .collapseMenu{
+        display: block;
+        transition: 0.5s ease-in-out;
+        
+    }
+};
