@@ -1,0 +1,88 @@
+@use "../settings" as set;
+
+main{
+    #descri{
+        display: grid;
+        grid-template-columns: 50% 40%;
+        padding-top: 0px;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        gap: 10px;
+        @media screen and (max-width:1160px) {
+            grid-template-columns: 60%;
+            margin: 0 10px;
+        }
+        .descriText{
+            font-family: set.$font2;
+            text-align: center;
+            letter-spacing: 0.7rem;
+            @media screen and (max-width:800px) {
+                    letter-spacing: 0;
+                }
+         
+            h1{
+                text-transform: uppercase;
+                text-shadow:set.$black2 4px 5px 8px;
+               transform: translateX(-1000px);
+                font-weight: 800;
+                font-size: 3.5rem;
+                margin-bottom: 25px;
+                transition: all 1s ease-in-out;
+                @media screen and (max-width:1250px){
+                    margin-bottom: 20px;
+                }
+                @media screen and (max-width:800px){
+                    margin-bottom: 10px;
+                }
+            }
+            h2{
+                font-weight: 800;
+                opacity: 0;
+                font-size: 2.5rem;
+                margin-bottom: 40px;
+                transform: translateX(-1100px);
+                transition: all 2s ease-in-out;
+                @media screen and (max-width:1250px){
+                    margin-bottom: 20px;
+                    font-size: 2rem;
+                }
+                @media screen and (max-width:800px){
+                    margin-bottom: 10px;
+                }
+            }
+            p{
+                opacity:0;
+                font-size: 1.2rem;
+                font-weight: 400;
+                letter-spacing: 0.2rem;
+                transform: translateY(200px);
+                transition: all 1s ease-in-out;
+            }
+            .descriTextPShow{
+                opacity:1;
+                font-weight: 400;
+                letter-spacing: 0.2rem;
+                transform: none;
+                transition: all 3s ease-in-out;
+            }
+        } 
+        .descriImg{
+            opacity: 0;
+            transform: translateX(600px);
+            transition: all 2.5s ease-in-out;
+            
+            img{
+                border-radius: 5px;
+                box-shadow: set.$black2 7px 3px 13px 0px;
+                // width: 100%;
+                height: 800px;
+            }
+        }  
+        .descriImgShow{
+            opacity: 1;
+            transform: none;
+            transition: all 2.5s ease-in-out;
+        } 
+    }
+}

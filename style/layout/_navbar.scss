@@ -1,0 +1,113 @@
+@use '../settings' as set;
+
+header{
+    a{
+        color: set.$black1;
+    }
+    li{
+        position: relative;
+    }
+    .navBar{
+        opacity: 0;
+        top: -90px;
+        text-transform: uppercase;
+        font-family: set.$font1;
+        font-size: 1.0rem;
+        font-weight: 500;
+        position: fixed;
+        width: 100%;
+        transition: all ease-in-out 2s;
+        display: grid;
+        grid-template-columns: 25% 75%;
+        align-items: center;
+        min-height: 70px;
+        background: set.$white1;
+                                    #logo{
+                                        display: flex;
+                                        justify-content: center;
+                                     }
+
+                                     #navmenu{
+                                        display: flex;
+                                        justify-content: space-evenly;
+                                        a{
+                                            padding: 10px;
+                                        }
+                                        .navMenuDropdown{
+                                            visibility: hidden;
+                                            display: block;
+                                            position: absolute;
+                                            background-color: set.$white2;
+                                            width: 200px;
+                                            top: 100%;
+                                            transform: translateY(60px);
+                                            transition: all ease-in-out 0.3s;
+                                            opacity: 0;
+                                            li{
+                                                padding: 10px;
+                                            }
+                                        }
+                                        .navMenuDropdownShow{
+                                            visibility: visible;
+                                            position: absolute;
+                                            background-color: set.$white2;
+                                            width: 200px;
+                                            top: 48%;
+                                            transform: translateY(30.5px);
+                                           transition: all ease-in-out 0.5s;
+                                           opacity: 1;
+                                        }
+                                        @media screen and (max-width:800px){
+                                            display: none;
+                                        }
+                                    }
+                                    .collapseMenu{
+                                        display: none;
+                                        position: absolute;
+                                        width: 100%;
+                                        background: set.$white1;
+                                        top: 60px;
+                                        right: -850px;
+                                        transition: 0.5s ease-in-out;
+                                        @media screen and (max-width:800px){
+                                        display: block;
+                                        transition: 0.5s ease-in-out;
+                                        }
+                                        
+                                        
+                                        li{
+                                            padding: 20px;
+                                            margin-left: 20px;
+                                        
+                                        }
+                                        hr{
+                                            background: set.$gradiant1;
+                                            min-height: 4px;
+                                            border: none;
+                                            width: 90%;
+                                            border-radius: 20px;
+                                            margin: 0 auto;
+                                        }
+                                        .collapseMenuDrpdown{
+                                            display: none;
+                                        }
+                                        .collapseMenuDrpdownShow{
+                                            display: block;
+                                        }
+                                    }
+                                    .collapseMenuOn{
+                                        position: absolute;
+                                        display: none;
+                                        top: 60px;
+                                        right: 0px;
+                                        transition: 0.5s ease-in-out;
+                                        @media screen and (max-width:800px){
+                                            display: block;
+                                            transition: 0.5s ease-in-out;
+                                        }
+                                    }
+                                  
+    }
+
+
+}

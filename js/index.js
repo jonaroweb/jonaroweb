@@ -72,24 +72,36 @@ const navBarEffect = () => {
         hambSpan3.classList.toggle("hambSpan3On");
     });
     main.addEventListener("click", () => {
+        collapseMenuDrpdown.classList.remove("collapseMenuDrpdownShow");
+        drpIcon2.classList.remove("drpIconShow");
         collapseMenu.classList.remove("collapseMenuOn");
         hambSpan2.classList.remove("hambSpan2On");
         hambSpan3.classList.remove("hambSpan3On");
         hambSpan1.classList.remove("hambSpan1On");
     });
     window.addEventListener("load", () => {
-        navBar.style.top = 0;
-        navBar.style.opacity = "1";
+        setTimeout(() => {
+            navBar.style.top = 0;
+            navBar.style.opacity = "1";
+        }, 3000);
     });
 };
 navBarEffect();
-const descriTextH1 = document.querySelector(".descriTextH1");
-const descriTextH2 = document.querySelector(".descriTextH2");
-const descriTextP = document.querySelector(".descriTextP");
+const descriTextH1 = document.querySelector(".descriText h1");
+const descriTextH2 = document.querySelector(".descriText h2");
+const descriTextP = document.querySelector(".descriText p");
+
 const descriImg = document.querySelector(".descriImg");
 window.addEventListener("load", () => {
+    setTimeout(() => {
+        descriTextH2.style.opacity = "1";
+        descriTextH2.style.transform = "none";
+    }, 400);
     descriTextH1.style.transform = "none";
-    descriTextH2.style.transform = "none";
-    descriTextP.classList.add("descriTextPShow");
-    descriImg.classList.add("descriImgShow");
+    setTimeout(() => {
+        descriTextP.classList.add("descriTextPShow");
+    }, 800);
+    setTimeout(() => {
+        descriImg.classList.add("descriImgShow");
+    }, 1000);
 });

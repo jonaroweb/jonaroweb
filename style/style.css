@@ -1,294 +1,353 @@
-/* ***************GENERAL**************** */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-/* font-family: 'Open Sans', sans-serif;
-font-family: 'Roboto', sans-serif; */
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style-type: none ;
-}
-body{
-    background-color: blueviolet;
-}
-main{
-    height: 300vh;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
 }
 
-/* ***************NAVBAR**************** */
-.navBar{
-    opacity: 0;
-    top: -90px;
-    text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.0rem;
-    font-weight: 500;
-    position: fixed;
-    width: 100%;
-    transition: all ease-in-out 2s;
-    display: grid;
-    grid-template-columns: 25% 75%;
-    align-items: center;
-    min-height: 70px;
-    background-color: white;
+body {
+  background: blueviolet;
 }
-.navBar a{
-    color: black;
+body main {
+  height: 300vh;
 }
-nav ul li{
-    position: relative;
-}
-#logo{
-    display: flex;
-    justify-content: center;
-}
-#navmenu{
-    display: flex;
-    justify-content: space-evenly;
-}
-#navmenu a{
-    padding: 10px;
-}
-.navMenuDropdown{
-    visibility: hidden;
-    display: block;
-    position: absolute;
-    background-color: rgba(245, 245, 245, 0.541);
-    width: 200px;
-    top: 100%;
-    transform: translateY(60px);
-    transition: all ease-in-out 0.3s;
-    opacity: 0;
-}
-.navMenuDropdownShow{
-    visibility: visible;
-    position: absolute;
-    background-color: rgba(245, 245, 245, 0.747);
-    width: 200px;
-    top: 48%;
-    transform: translateY(30.5px);
-   transition: all ease-in-out 0.5s;
-   opacity: 1;
-}
-.navMenuDropdown li{
-    padding: 10%;
-}
-.drpIcon, .drpIcon2{
-    display: inline-block;
-    transition: all 0.5s ease-in-out;
-    margin-left: 5px;
-}
-.drpIconShow{
-    color: chartreuse;
-    transform: rotate(180deg);
-   transition: all 0.5s;
-   margin-left: 5px;
-}
-.onBarAccueil,.onBarServices,.onBarContact{
-    transition: all linear 0.3s;
-    opacity: 0;
-    display: block;
-    position: absolute;
-    top: 30px;
-    background: linear-gradient(to right, blueviolet,rgb(235, 12, 186));
-    height: 4px;
-    width: 10%;
-    border-radius: 15px;
-}
-.onBarAll{
-    transition: all linear 0.3s;
-    opacity: 1;
-    display: block;
-    position: absolute;
-    top: 30px;
-    background: linear-gradient(to right, blueviolet,rgb(235, 12, 186));
-    height: 4px;
-    width: 100%;
-    border-radius: 15px;
-}
-#ulHamBtn{
-    display: none;
-}
-.hambBtn{
-    width: 35px;
-    padding: 10px;
-}
-.hambBtn:hover{
-    cursor: pointer;
-}
-.hambSpan1,.hambSpan2,.hambSpan3{
-    display: block;
-    background: linear-gradient(to right, blueviolet,rgb(235, 12, 186));
-    height: 4px;
-    width: 100%;
-    border-radius: 20px;
-    margin: 5px 0;
-    transition: all 0.5s ease-in-out;
 
+header a {
+  color: black;
 }
- .hambSpan3On{
-    transform: rotate(140deg);
-    position: absolute;
-    top: 5px;
-    width: 70%;
-    transition: all 0.5s ease-in-out;
-
- }
- .hambSpan1On{
-    transform: rotate(-140deg);
-    position: absolute;
-    top: 5px;
-    width: 70%;
-    transition: all 0.5s ease-in-out;
- }
- .hambSpan2On{
-    display: none;
-    transition: all 0.5s ease-in-out;
- }
-
-.collapseMenuDrpdown{
-    display: none;
+header li {
+  position: relative;
 }
-.collapseMenuDrpdownShow{
+header .navBar {
+  opacity: 0;
+  top: -90px;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  position: fixed;
+  width: 100%;
+  -webkit-transition: all ease-in-out 2s;
+  transition: all ease-in-out 2s;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 70px;
+  background: white;
+}
+header .navBar #logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+header .navBar #navmenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+header .navBar #navmenu a {
+  padding: 10px;
+}
+header .navBar #navmenu .navMenuDropdown {
+  visibility: hidden;
+  display: block;
+  position: absolute;
+  background-color: rgba(245, 245, 245, 0.541);
+  width: 200px;
+  top: 100%;
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  opacity: 0;
+}
+header .navBar #navmenu .navMenuDropdown li {
+  padding: 10px;
+}
+header .navBar #navmenu .navMenuDropdownShow {
+  visibility: visible;
+  position: absolute;
+  background-color: rgba(245, 245, 245, 0.541);
+  width: 200px;
+  top: 48%;
+  -webkit-transform: translateY(30.5px);
+          transform: translateY(30.5px);
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+  opacity: 1;
+}
+@media screen and (max-width: 800px) {
+  header .navBar #navmenu {
+    display: none;
+  }
+}
+header .navBar .collapseMenu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: white;
+  top: 60px;
+  right: -850px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+@media screen and (max-width: 800px) {
+  header .navBar .collapseMenu {
     display: block;
-}
-.collapseMenu{
-    display: none;
-    position: absolute;
-    width: 100%;
-    background-color: rgb(247, 247, 247);
-    top: 60px;
-    right: -850px;
+    -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
+  }
 }
-.collapseMenuOn{
-    position: absolute;
-    display: none;
-    top: 60px;
-    right: 0px;
+header .navBar .collapseMenu li {
+  padding: 20px;
+  margin-left: 20px;
+}
+header .navBar .collapseMenu hr {
+  background: -webkit-gradient(linear, left top, right top, from(blueviolet), to(rgb(235, 12, 186)));
+  background: linear-gradient(to right, blueviolet, rgb(235, 12, 186));
+  min-height: 4px;
+  border: none;
+  width: 90%;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+header .navBar .collapseMenu .collapseMenuDrpdown {
+  display: none;
+}
+header .navBar .collapseMenu .collapseMenuDrpdownShow {
+  display: block;
+}
+header .navBar .collapseMenuOn {
+  position: absolute;
+  display: none;
+  top: 60px;
+  right: 0px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+@media screen and (max-width: 800px) {
+  header .navBar .collapseMenuOn {
+    display: block;
+    -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
+  }
 }
 
-.collapseMenu li{
-    padding: 20px;
-    margin-left: 20px;
-
-}
-.hambMenu hr{
-    background: linear-gradient(to right, blueviolet,rgb(235, 12, 186));
-    min-height: 4px;
-    border: none;
-    width: 90%;
-    border-radius: 20px;
-    margin: 0 auto;
-}
-.descriText{
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    letter-spacing: 0.7rem;
-}
-.descriTextH1{
-    text-transform: uppercase;
-    text-shadow:#00000075 4px 5px 8px;
-   transform: translateX(-1000px);
-    font-weight: 800;
-    font-size: 3rem;
-    margin-bottom: 30px;
-    transition: all 1s ease-in-out;
-}
-.descriTextH2{
-    font-weight: 600;
-    font-size: 2rem;
-    margin-bottom: 50px;
-    transform: translateX(-1000px);
-    transition: all 2s ease-in-out;
-}
-.descriTextP{
-    opacity:0;
-    font-size: 1.2rem;
-    font-weight: 300;
-    letter-spacing: 0.2rem;
-    transform: translateY(200px);
-    transition: all 2s ease-in-out;
-}
-.descriTextPShow{
-    opacity:1;
-    font-weight: 300;
-    letter-spacing: 0.2rem;
-    transform: none;
-    transition: all 3s ease-in-out;
-}
-#descri{
-    display: grid;
-    grid-template-columns: 45% 45%;
-    padding-top: 200px;
-    align-items: center;
-    justify-items: center;
-    justify-content: space-around;
-    gap: 50px;
-
-    
-}
-.descriImg{
-    opacity: 0;
-    transform: translateX(1000px);
-    transition: all 1s ease-in-out;
-}
-.descriImg img{
-    border-radius: 5px;
-    box-shadow: #0000009e 7px 3px 13px 0px;
-    width: 100%;
-}
-.descriImgShow{
-    opacity: 1;
-    transform: none;
-    transition: all 1s ease-in-out;
+.drpIcon, .drpIcon2 {
+  display: inline-block;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  margin-left: 5px;
 }
 
-/* ****************MEDIA QUERIES****************** */
-
-@media screen and (max-width:1250px) {
-    .descriText{
-        font-family: 'Roboto', sans-serif;
-        text-align: center;
-        letter-spacing: 0.4rem;
-    }
-    .descriTextH1,.descriTextH2{
-         margin-bottom: 20px; 
-    }
+.drpIconShow {
+  color: chartreuse;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-left: 5px;
 }
 
+.onBarAccueil, .onBarServices, .onBarContact {
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  top: 30px;
+  background: -webkit-gradient(linear, left top, right top, from(blueviolet), to(rgb(235, 12, 186)));
+  background: linear-gradient(to right, blueviolet, rgb(235, 12, 186));
+  height: 3px;
+  width: 0;
+  border-radius: 15px;
+}
 
-@media screen and (max-width:1160px) {
-    #descri{
-    grid-template-columns: 100%;
+.onBarAll {
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+  opacity: 1;
+  display: block;
+  position: absolute;
+  top: 30px;
+  background: -webkit-gradient(linear, left top, right top, from(blueviolet), to(rgb(235, 12, 186)));
+  background: linear-gradient(to right, blueviolet, rgb(235, 12, 186));
+  height: 3px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+#ulHamBtn {
+  display: none;
+}
+#ulHamBtn .hambBtn {
+  width: 35px;
+  padding: 10px;
+}
+#ulHamBtn .hambBtn:hover {
+  cursor: pointer;
+}
+#ulHamBtn .hambBtn .hambSpan1, #ulHamBtn .hambBtn .hambSpan2, #ulHamBtn .hambBtn .hambSpan3 {
+  display: block;
+  background: -webkit-gradient(linear, left top, right top, from(blueviolet), to(rgb(235, 12, 186)));
+  background: linear-gradient(to right, blueviolet, rgb(235, 12, 186));
+  height: 4px;
+  width: 100%;
+  border-radius: 20px;
+  margin: 5px 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+#ulHamBtn .hambBtn .hambSpan3On {
+  -webkit-transform: rotate(140deg);
+          transform: rotate(140deg);
+  position: absolute;
+  top: 5px;
+  width: 70%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+#ulHamBtn .hambBtn .hambSpan1On {
+  -webkit-transform: rotate(-140deg);
+          transform: rotate(-140deg);
+  position: absolute;
+  top: 5px;
+  width: 70%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+#ulHamBtn .hambBtn .hambSpan2On {
+  display: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 800px) {
+  #ulHamBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+main #descri {
+  display: grid;
+  grid-template-columns: 50% 40%;
+  padding-top: 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+@media screen and (max-width: 1160px) {
+  main #descri {
+    grid-template-columns: 60%;
     margin: 0 10px;
- }
- .descriText{
-    letter-spacing: 0.5rem;
+  }
 }
+main #descri .descriText {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  letter-spacing: 0.7rem;
 }
-@media screen and (max-width:800px) {
-    .descriText{
-        letter-spacing: 0;
-    }
-    .descriTextH1,.descriTextH2{
-        margin-bottom: 10px;
-    }
-    #navmenu{
-        display: none;
-    }
-    #ulHamBtn{
-        display: flex;
-        justify-content: flex-end;
-    }
-    .collapseMenuOn{
-        display: block;
-        transition: 0.5s ease-in-out;
-    }
-    .collapseMenu{
-        display: block;
-        transition: 0.5s ease-in-out;
-        
-    }
-};
+@media screen and (max-width: 800px) {
+  main #descri .descriText {
+    letter-spacing: 0;
+  }
+}
+main #descri .descriText h1 {
+  text-transform: uppercase;
+  text-shadow: rgba(0, 0, 0, 0.459) 4px 5px 8px;
+  -webkit-transform: translateX(-1000px);
+          transform: translateX(-1000px);
+  font-weight: 800;
+  font-size: 3.5rem;
+  margin-bottom: 25px;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+@media screen and (max-width: 1250px) {
+  main #descri .descriText h1 {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  main #descri .descriText h1 {
+    margin-bottom: 10px;
+  }
+}
+main #descri .descriText h2 {
+  font-weight: 800;
+  opacity: 0;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  -webkit-transform: translateX(-1100px);
+          transform: translateX(-1100px);
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+@media screen and (max-width: 1250px) {
+  main #descri .descriText h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  main #descri .descriText h2 {
+    margin-bottom: 10px;
+  }
+}
+main #descri .descriText p {
+  opacity: 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+main #descri .descriText .descriTextPShow {
+  opacity: 1;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out;
+}
+main #descri .descriImg {
+  opacity: 0;
+  -webkit-transform: translateX(600px);
+          transform: translateX(600px);
+  -webkit-transition: all 2.5s ease-in-out;
+  transition: all 2.5s ease-in-out;
+}
+main #descri .descriImg img {
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.459) 7px 3px 13px 0px;
+          box-shadow: rgba(0, 0, 0, 0.459) 7px 3px 13px 0px;
+  height: 800px;
+}
+main #descri .descriImgShow {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition: all 2.5s ease-in-out;
+  transition: all 2.5s ease-in-out;
+}/*# sourceMappingURL=style.css.map */

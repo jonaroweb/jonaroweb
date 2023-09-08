@@ -1,0 +1,48 @@
+@use "../settings" as set;
+
+#ulHamBtn{
+   
+    display: none;
+
+    .hambBtn{
+        width: 35px;
+        padding: 10px;
+        &:hover{
+            cursor: pointer;
+        }
+        .hambSpan1,.hambSpan2,.hambSpan3{
+            display: block;
+            background: set.$gradiant1;
+            height: 4px;
+            width: 100%;
+            border-radius: 20px;
+            margin: 5px 0;
+            transition: all 0.5s ease-in-out;
+        
+        }
+         .hambSpan3On{
+            transform: rotate(140deg);
+            position: absolute;
+            top: 5px;
+            width: 70%;
+            transition: all 0.5s ease-in-out;
+        
+         }
+         .hambSpan1On{
+            transform: rotate(-140deg);
+            position: absolute;
+            top: 5px;
+            width: 70%;
+            transition: all 0.5s ease-in-out;
+         }
+         .hambSpan2On{
+            display: none;
+            transition: all 0.5s ease-in-out;
+         }
+    }
+    @media screen and (max-width:800px){
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+}
