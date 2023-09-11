@@ -12,6 +12,9 @@ body {
 body main {
   height: 300vh;
 }
+body .mainSlide {
+  padding-top: 270px;
+}
 
 header a {
   color: black;
@@ -61,7 +64,7 @@ header .navBar #navmenu .navMenuDropdown {
   visibility: hidden;
   display: block;
   position: absolute;
-  background-color: rgba(245, 245, 245, 0.541);
+  background-color: rgba(245, 245, 245, 0.54);
   width: 200px;
   top: 100%;
   -webkit-transform: translateY(60px);
@@ -76,7 +79,7 @@ header .navBar #navmenu .navMenuDropdown li {
 header .navBar #navmenu .navMenuDropdownShow {
   visibility: visible;
   position: absolute;
-  background-color: rgba(245, 245, 245, 0.541);
+  background-color: rgba(245, 245, 245, 0.54);
   width: 200px;
   top: 48%;
   -webkit-transform: translateY(30.5px);
@@ -272,7 +275,7 @@ main #descri .descriText {
 }
 main #descri .descriText h1 {
   text-transform: uppercase;
-  text-shadow: rgba(0, 0, 0, 0.459) 4px 5px 8px;
+  text-shadow: rgba(0, 0, 0, 0.46) 4px 5px 8px;
   -webkit-transform: translateX(-1000px);
           transform: translateX(-1000px);
   font-weight: 800;
@@ -340,8 +343,8 @@ main #descri .descriImg {
 }
 main #descri .descriImg img {
   border-radius: 5px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.459) 7px 3px 13px 0px;
-          box-shadow: rgba(0, 0, 0, 0.459) 7px 3px 13px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.46) 7px 3px 13px 0px;
+          box-shadow: rgba(0, 0, 0, 0.46) 7px 3px 13px 0px;
   height: 800px;
 }
 main #descri .descriImgShow {
