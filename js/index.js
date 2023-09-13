@@ -67,7 +67,6 @@ const navBarEffect = () => {
     });
     hambBtn.addEventListener("click", () => {
         collapseMenu.classList.toggle("collapseMenuOn");
-        main.classList.toggle("mainSlide");
         hambSpan1.classList.toggle("hambSpan1On");
         hambSpan2.classList.toggle("hambSpan2On");
         hambSpan3.classList.toggle("hambSpan3On");
